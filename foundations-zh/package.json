@@ -9,8 +9,7 @@
   "scripts": {
     "lint": "eslint src/** --fix",
     "build": "shx rm -rf lib && tsc -p tsconfig.json --outDir tmp && babel tmp -d lib && shx rm -rf tmp",
-    "test": "mocha",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "test": "mocha"
   },
   "husky": {
     "hooks": {
