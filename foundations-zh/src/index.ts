@@ -17,7 +17,7 @@ export function parseError(err: Error): ErrorMessage {
       throw new Error('err is not an Error.');
   }
   const stack: StackItem[] = [];
-  const stackRegExp: RegExp = /.*(http.+)\:(\d+)\:(\d+)$/;
+  const stackRegExp = /.*(http.+)\:(\d+)\:(\d+)$/;
   const stackToBeParsed: string[] = (err.stack || '').split('\n').slice(1);
 
   stackToBeParsed.forEach((info: string) => {
